@@ -14,7 +14,7 @@ public class Dir {
 		this.keyPai = 0;
 	}
 
-	public void acesso(File f) {
+	public void acesso(File f) {	
 		List<File> lista = new ArrayList<File>();
 		if(this.raiz == null) {
 			this.criaNode(f, this.key, keyPai);
@@ -49,6 +49,7 @@ public class Dir {
 			}
 		}
 	}
+	
 	public Node buscaPai(Node raiz, int key) {	
 		if(raiz == null) {
 			return raiz;
@@ -105,7 +106,6 @@ public class Dir {
 		this.print(this.raiz, v);
 	}
 
-
 	public void print(Node raiz, int v) {
 
 		if(raiz != null) {			
@@ -122,10 +122,8 @@ public class Dir {
 	public static void main(String[] args) {
 
 		Dir d = new Dir();
-		File f = new File("C:\\Copia");
+		File f = new File("C:\\Copia"); 	//Endereço do Diretório
 		d.acesso(f);
-
 		d.print();
 	}
-
 }
