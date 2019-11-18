@@ -108,10 +108,11 @@ public class Dir {
 
 	public void print(Node raiz, int v) {
 
-		if(raiz != null) {			
+		if(raiz != null) {
 			for(int i = 0; i < v; i++) {
-				System.out.print("\t");
+				System.out.print("\t"+"│");
 			}
+			System.out.print("───");
 			System.out.println(raiz.getNome());				
 			this.print(raiz.getFilho(), v+1);
 			v--;
@@ -122,7 +123,7 @@ public class Dir {
 	public static void main(String[] args) {
 
 		Dir d = new Dir();
-		File f = new File("C:\\Copia"); 	//Endere�o do Diret�rio
+		File f = new File("C:\\Copia"); 	//Endereço do Diretório
 		d.acesso(f);
 		d.print();
 	}
